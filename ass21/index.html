@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Color Array Manipulation</title>
+    </head>
+    <body>
+      <script>
+        // Initialize an array with color names
+        let colors = ["Red", "Green", "Blue", "Yellow"];
+        document.write("<h3>Initial Colors:</h3>" + colors.join(", ") + "<br><br>");
+    
+        // a. Add color to the beginning
+        let colorBeginning = prompt("Enter a color to add at the beginning:");
+        colors.unshift(colorBeginning);
+        document.write("<h3>After adding color to beginning:</h3>" + colors.join(", ") + "<br><br>");
+    
+        // b. Add color to the end
+        let colorEnd = prompt("Enter a color to add at the end:");
+        colors.push(colorEnd);
+        document.write("<h3>After adding color to end:</h3>" + colors.join(", ") + "<br><br>");
+    
+        // c. Add two more colors to the beginning
+        colors.unshift("Orange", "Purple");
+        document.write("<h3>After adding two colors to beginning:</h3>" + colors.join(", ") + "<br><br>");
+    
+        // d. Delete the first color
+        colors.shift();
+        document.write("<h3>After deleting the first color:</h3>" + colors.join(", ") + "<br><br>");
+    
+        // e. Delete the last color
+        colors.pop();
+        document.write("<h3>After deleting the last color:</h3>" + colors.join(", ") + "<br><br>");
+    
+        // f. Add color at a specific index
+        let indexToAdd = +prompt("At which index do you want to add a color?");
+        let colorToAdd = prompt("Enter the color to add at index " + indexToAdd + ":");
+        colors.splice(indexToAdd, 0, colorToAdd);
+        document.write("<h3>After adding color at index " + indexToAdd + ":</h3>" + colors.join(", ") + "<br><br>");
+    
+        // g. Delete color(s) at a specific index
+        let indexToDelete = +prompt("At which index do you want to delete color(s)?");
+        let countToDelete = +prompt("How many colors do you want to delete?");
+        colors.splice(indexToDelete, countToDelete);
+        document.write("<h3>After deleting " + countToDelete + " color(s) from index " + indexToDelete + ":</h3>" + colors.join(", ") + "<br><br>");
+      </script>
+    </body>
+    </html>
+    
+    <script src="app.js"></script>
+</body>
+</html>
